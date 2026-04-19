@@ -26,9 +26,9 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* NAV */
@@ -48,7 +48,6 @@
     .logo {
       font-size: 15px;
       font-weight: 600;
-      letter-spacing: -0.01em;
       color: var(--text);
       text-decoration: none;
     }
@@ -60,41 +59,45 @@
     .nav-links {
       display: flex;
       gap: 36px;
-      align-items: center;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--muted);
       font-size: 14px;
-      transition: color 0.2s;
     }
 
     .nav-links a:hover {
       color: var(--text);
     }
 
-    /* HERO */
+    /* HERO CENTERED */
     .hero {
-      padding: 140px 60px;
-      max-width: 800px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-inner {
+      max-width: 700px;
     }
 
     .hero-label {
       font-size: 12px;
-      font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: clamp(36px, 5vw, 56px);
       font-weight: 600;
       line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .hero h1 em {
@@ -104,17 +107,14 @@
     }
 
     .hero-desc {
-      font-size: 17px;
+      font-size: 16px;
       color: var(--muted);
-      font-weight: 300;
-      line-height: 1.7;
-      max-width: 520px;
+      line-height: 1.6;
     }
 
     /* MOBILE */
     @media (max-width: 700px) {
       nav { padding: 18px 24px; }
-      .hero { padding: 100px 24px; }
     }
   </style>
 </head>
@@ -131,11 +131,13 @@
   </nav>
 
   <section class="hero">
-    <p class="hero-label">CHARLIE ESTANES JR. — BSIT - S - 2A</p>
-    <h1>Multimedia <em>&</em> Authoring</h1>
-    <p class="hero-desc">
-      A portfolio of multimedia projects covering 3D animation in Blender and frame-by-frame rotoscope work. Built for academic documentation and presentation.
-    </p>
+    <div class="hero-inner">
+      <p class="hero-label">CHARLIE ESTANES JR. — BSIT - S - 2A</p>
+      <h1>Multimedia <em>&</em> Authoring</h1>
+      <p class="hero-desc">
+        A portfolio of multimedia projects covering 3D animation in Blender and frame-by-frame rotoscope work. Built for academic documentation and presentation.
+      </p>
+    </div>
   </section>
 
 </body>
