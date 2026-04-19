@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Multimedia & Authoring</title>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg: #ffffff;
@@ -12,7 +14,6 @@
       --muted: #6b6b6b;
       --accent: #1a56db;
       --border: #e8e8e8;
-      --subtle: #f7f7f7;
     }
 
     * {
@@ -45,7 +46,6 @@
     }
 
     .logo {
-      font-family: 'DM Sans', sans-serif;
       font-size: 15px;
       font-weight: 600;
       letter-spacing: -0.01em;
@@ -67,8 +67,6 @@
       text-decoration: none;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 0.01em;
       transition: color 0.2s;
     }
 
@@ -78,7 +76,7 @@
 
     /* HERO */
     .hero {
-      padding: 120px 60px 100px;
+      padding: 140px 60px;
       max-width: 800px;
     }
 
@@ -92,12 +90,10 @@
     }
 
     .hero h1 {
-      font-family: 'DM Sans', sans-serif;
       font-size: clamp(36px, 5vw, 56px);
       font-weight: 600;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      color: var(--text);
       margin-bottom: 24px;
     }
 
@@ -115,147 +111,14 @@
       max-width: 520px;
     }
 
-    /* DIVIDER */
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 0 60px;
-    }
-
-    /* PROJECTS */
-    .projects {
-      padding: 80px 60px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 48px;
-    }
-
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .project-item {
-      display: grid;
-      grid-template-columns: 48px 1fr auto;
-      align-items: start;
-      gap: 24px;
-      padding: 36px 0;
-      border-top: 1px solid var(--border);
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.15s;
-      cursor: pointer;
-    }
-
-    .project-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-item:hover .project-title {
-      color: var(--accent);
-    }
-
-    .project-number {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--muted);
-      padding-top: 4px;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .project-content {}
-
-    .project-title {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 8px;
-      transition: color 0.2s;
-    }
-
-    .project-sub {
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    .project-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      padding-top: 4px;
-    }
-
-    .tag {
-      font-size: 11px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      color: var(--muted);
-      letter-spacing: 0.02em;
-    }
-
-    /* ABOUT */
-    .about {
-      padding: 80px 60px;
-      background: var(--subtle);
-      border-top: 1px solid var(--border);
-    }
-
-    .about-inner {
-      max-width: 560px;
-    }
-
-    .about h2 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 16px;
-    }
-
-    .about p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.75;
-      font-weight: 300;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 24px 60px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
+    /* MOBILE */
     @media (max-width: 700px) {
       nav { padding: 18px 24px; }
-      .hero { padding: 72px 24px 64px; }
-      .divider { margin: 0 24px; }
-      .projects { padding: 60px 24px; }
-      .about { padding: 60px 24px; }
-      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
-      .project-item { grid-template-columns: 36px 1fr; }
-      .project-tags { display: none; }
+      .hero { padding: 100px 24px; }
     }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -268,55 +131,12 @@
   </nav>
 
   <section class="hero">
-    <p class="hero-label">School Portfolio — 2026</p>
+    <p class="hero-label">CHARLIE ESTANES JR. — BSIT - S - 2A</p>
     <h1>Multimedia <em>&</em> Authoring</h1>
-    <p class="hero-desc">A portfolio of multimedia projects covering 3D animation in Blender and frame-by-frame rotoscope work. Built for academic documentation and presentation.</p>
+    <p class="hero-desc">
+      A portfolio of multimedia projects covering 3D animation in Blender and frame-by-frame rotoscope work. Built for academic documentation and presentation.
+    </p>
   </section>
-
-  <div class="divider"></div>
-
-  <section class="projects">
-    <p class="section-label">Projects</p>
-    <div class="project-list">
-
-      <a href="solar-system.html" class="project-item">
-        <span class="project-number">01</span>
-        <div class="project-content">
-          <div class="project-title">Blender: Solar System</div>
-          <div class="project-sub">3D animation of the solar system — video, planet descriptions, age calculator, and Python script.</div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Blender</span>
-          <span class="tag">Python</span>
-        </div>
-      </a>
-
-      <a href="rotoscope.html" class="project-item">
-        <span class="project-number">02</span>
-        <div class="project-content">
-          <div class="project-title">Rotoscope: Live Action</div>
-          <div class="project-sub">Frame-by-frame animation traced over a dance reference video — 12 weeks, 5 seconds per week.</div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Krita</span>
-          <span class="tag">CapCut</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <section class="about">
-    <div class="about-inner">
-      <h2>About This Site</h2>
-      <p>This website documents my work for Multimedia and Authoring — a school subject focused on digital creation, animation, and visual storytelling. Each project page contains the full process, tools used, and final outputs.</p>
-    </div>
-  </section>
-
-  <footer>
-    <span>© 2026 Multimedia and Authoring</span>
-    <span>GitHub Pages</span>
-  </footer>
 
 </body>
 </html>
