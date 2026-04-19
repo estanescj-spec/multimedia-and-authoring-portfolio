@@ -8,114 +8,64 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#ffffff;
-  --text:#111;
-  --muted:#6b6b6b;
-  --accent:#1a56db;
+body{margin:0;font-family:DM Sans;background:#fff;}
+
+.navbar{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;
+padding:18px 60px;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(12px);
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+z-index:999;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+.logo{font-weight:600;}
+.logo span{color:#1a56db;}
 
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
+.nav-links{display:flex;gap:30px;}
+.nav-links a{text-decoration:none;color:#666;font-size:14px;}
+.nav-links a:hover{color:#000;}
 
-/* NAVBAR */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 60px;
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(10px);
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
-  z-index:100;
-}
-
-.logo{
-  font-weight:600;
-  font-size:15px;
-  text-decoration:none;
-  color:var(--text);
-}
-
-.logo span{ color:var(--accent); }
-
-.nav-links a{
-  margin-left:30px;
-  text-decoration:none;
-  color:var(--muted);
-  font-size:14px;
-}
-
-.nav-links a:hover{ color:var(--text); }
-
-/* HERO */
 .hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:80px;
 }
 
-.hero-inner{ max-width:700px; }
+.hero-inner{max-width:700px;}
 
-.hero-label{
-  font-size:12px;
-  letter-spacing:0.12em;
-  color:var(--accent);
-  margin-bottom:20px;
-}
+.hero-label{font-size:12px;color:#1a56db;letter-spacing:0.12em;}
 
-h1{
-  font-size:clamp(40px,6vw,60px);
-  margin-bottom:20px;
-}
+h1{font-size:50px;margin:20px 0;}
+h1 em{color:#666;font-style:normal;}
 
-h1 em{
-  color:var(--muted);
-  font-style:normal;
-}
+.hero-desc{color:#666;}
 
-.hero-desc{
-  color:var(--muted);
-  font-size:16px;
-}
-
-/* MOBILE */
-@media(max-width:700px){
-  nav{padding:16px 20px;}
-}
 </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html" class="logo">Multimedia <span>&</span> Authoring</a>
-  <div class="nav-links">
-    <a href="solar-system.html">Solar System</a>
-    <a href="rotoscope.html">Rotoscope</a>
-  </div>
-</nav>
+<div class="navbar">
+<div class="logo">Multimedia <span>&</span> Authoring</div>
+<div class="nav-links">
+<a href="solar-system.html">Solar System</a>
+<a href="rotoscope.html">Rotoscope</a>
+<a href="about.html">About</a>
+</div>
+</div>
 
-<section class="hero">
-  <div class="hero-inner">
-    <p class="hero-label">CHARLIE ESTANES JR. — BSIT - S - 2A</p>
-    <h1>Multimedia <em>&</em> Authoring</h1>
-    <p class="hero-desc">
-      A portfolio of multimedia projects covering 3D animation in Blender and frame-by-frame rotoscope work. Built for academic documentation and presentation.
-    </p>
-  </div>
-</section>
+<div class="hero">
+<div class="hero-inner">
+<div class="hero-label">CHARLIE ESTANES JR. — BSIT - S - 2A</div>
+<h1>Multimedia <em>&</em> Authoring</h1>
+<p class="hero-desc">A portfolio of multimedia projects covering 3D animation in Blender and frame-by-frame rotoscope work. Built for academic documentation and presentation.</p>
+</div>
+</div>
 
 </body>
 </html>
