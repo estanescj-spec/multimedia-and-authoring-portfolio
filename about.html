@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:DM Sans;
+  padding-top:80px;
+  background:#f7f7f7;
+}
+
+/* NAVBAR (FULL FIXED MATCH ALL PAGES) */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 40px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(12px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  z-index:9999;
+}
+
+.logo{
+  font-weight:600;
+}
+
+.logo span{
+  color:#1a56db;
+}
+
+.nav-links{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#666;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:#000;
+}
+
+/* DROPDOWN (SAME STYLE FIX) */
+.dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+.dropbtn{
+  text-decoration:none;
+  color:#666;
+  font-size:14px;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:100%;
+  right:0;
+  background:#fff;
+  min-width:180px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  border-radius:10px;
+  overflow:hidden;
+  z-index:99999;
+}
+
+.dropdown-content::before{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:0;
+  width:100%;
+  height:10px;
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+
+.dropdown-content a{
+  display:block;
+  padding:10px 12px;
+  font-size:13px;
+  color:#333;
+  text-decoration:none;
+}
+
+.dropdown-content a:hover{
+  background:#f2f2f2;
+}
+
+/* CONTAINER */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+h1{
+  margin:0 0 10px 0;
+  font-size:30px;
+}
+
+p{
+  color:#555;
+  line-height:1.6;
+}
+
+.section{
+  margin-top:20px;
+}
+
+.small-title{
+  font-size:13px;
+  color:#1a56db;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR (COMPLETE MATCH) -->
+<div class="navbar">
+
+  <div class="logo">Multimedia <span>&</span> Authoring</div>
+
+  <div class="nav-links">
+
+    <a href="index.html">Home</a>
+    <a href="solar-system.html">Solar System</a>
+
+    <div class="dropdown">
+      <a class="dropbtn" href="rotoscope.html">Rotoscope ▾</a>
+
+      <div class="dropdown-content">
+        <a href="rotoscope.html">Overview</a>
+        <a href="week1.html">Week 1</a>
+        <a href="week2.html">Week 2</a>
+        <a href="week3.html">Week 3</a>
+        <a href="week4.html">Week 4</a>
+        <a href="week5.html">Week 5</a>
+        <a href="week6.html">Week 6</a>
+        <a href="week7.html">Week 7</a>
+        <a href="week8.html">Week 8</a>
+        <a href="week9.html">Week 9</a>
+        <a href="week10.html">Week 10</a>
+        <a href="week11.html">Week 11</a>
+        <a href="week12.html">Week 12</a>
+      </div>
+    </div>
+
+    <a href="about.html">About</a>
+
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="card">
+
+  <div class="small-title">About This Project</div>
+  <h1>Multimedia & Authoring Portfolio</h1>
+
+  <p>
+    This website is a collection of my multimedia outputs for the subject Multimedia and Authoring. It includes 3D animation using Blender and frame-by-frame rotoscope animation work.
+  </p>
+
+  <div class="section">
+    <div class="small-title">What This Includes</div>
+    <p>• Blender Solar System Animation</p>
+    <p>• Age Calculator (Planet Time Conversion)</p>
+    <p>• Rotoscope Live Action Animation</p>
+    <p>• Weekly Progress Documentation (12 Weeks)</p>
+  </div>
+  
+  <div class="section">
+    <div class="small-title">Purpose</div>
+    <p>
+      This project demonstrates understanding of animation, timing, visual storytelling, and multimedia production workflows.
+    </p>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
