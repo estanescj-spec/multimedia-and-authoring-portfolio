@@ -592,19 +592,16 @@ vp.addEventListener('touchend', e => {
 
 function buildCards() {
   document.getElementById('track').innerHTML = slidePlanets.map(p => {
-    const ageStr = (earthAge && p.orbit)
-      ? `<p class="planet-age">Your age on ${p.name}: <b>${(earthAge / p.orbit).toFixed(2)} years</b></p>`
-      : '';
     return `<div class="planet-card">
       <img src="${p.img}" alt="${p.name}">
       <div class="planet-card-body">
         <h3>${p.name}</h3>
-        ${ageStr}
         <p>${p.desc}</p>
         <p class="planet-specs">${p.specs}</p>
       </div>
     </div>`;
   }).join('');
+
   updateTrack();
 }
 
