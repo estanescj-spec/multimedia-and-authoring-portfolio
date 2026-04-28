@@ -344,12 +344,12 @@ pre{
       and relative distances to visually explain how planets revolve around the sun.
       Built using a Python script inside Blender with realistic NASA textures, atmospheric effects,
       axial rotation, and a procedural star field background.
-    </p>
-    <br>
-    <h3>Tools Used</h3>
-    <p class="blender">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender logo">
-      <span>Blender</span>
+      <br><br><br>
+      <b>Requirements:</b><br>
+      <i>- Blender</i><br>
+      <i>- Python</i><br>
+      <i>- FFmpeg</i><br>
+      <i>- Solar system textures</i>
     </p>
   </div>
 </div>
@@ -389,9 +389,9 @@ pre{
 <div class="text-block">
   <h3>Method</h3>
   <p>
-    <b>Step 1: Download Textures</b><br>
+    <br><b>Step 1: Download Textures</b><br>
     Go to solarsystemscope.com/textures and download the files needed. Save them all in one folder (e.g. C:/Users/Charlie/Downloads/textures/).<br>
-    <b>Step 2: Set Up Blender</b><br>
+    <br><b>Step 2: Set Up Blender</b><br>
     1. Open Blender<br>
     2. Go to the <b>Scripting</b> tab at the top<br>
     3. Click <b>New</b> to create a new script<br>
@@ -400,21 +400,21 @@ pre{
   </p>
   <pre>TEX = "C:/Users/Charlie/Downloads/textures/"</pre>
   <p>
-    <b>Step 3: Run the Script</b><br>
+    <br><b>Step 3: Run the Script</b><br>
     1. Click the <b>Run Script</b> button (play icon) or press <b>Alt + P</b><br>
     2. Wait for the script to finish — you will see <i>Done!</i> printed at the bottom<br>
     3. The scene will now contain the planets, sun, moon, orbital rings, and a star field background<br>
-    <b>Step 4: Check the Scene</b><br>
+    <br><b>Step 4: Check the Scene</b><br>
     Before rendering, verify everything looks correct:<br>
     1. Press <b>Numpad 0</b> to look through the camera<br>
     2. Press <b>Space</b> to preview the animation in the viewport<br>
     3. Make sure all planets are visible and moving<br>
-    <b>Step 5: Render the Animation</b><br>
+    <br><b>Step 5: Render the Animation</b><br>
     1. Go to <b>Render</b> in the top menu<br>
     2. Click <b>Render Animation</b> or press <b>Ctrl + F12</b><br>
     3. Blender will render each of the 250 frames one by one and save them as PNG files<br>
     4. Wait for all frames to finish — this may take a while depending on your PC<br>
-    <b>Step 6: Find Your Rendered Frames</b><br>
+    <br><b>Step 6: Find Your Rendered Frames</b><br>
     Since the output path was not changed before rendering, Blender saved the frames to its default temp folder. Open <b>File Explorer</b> and navigate to:
   </p>
   <pre>C:\tmp\</pre>
@@ -422,7 +422,7 @@ pre{
     You should see files named <i>0001.png</i>, <i>0002.png</i>, and so on up to <i>0250.png</i>. If they are not there, check the exact save location inside Blender:<br>
     1. Go to <b>Properties → Output tab</b> (printer icon on the right panel)<br>
     2. Look at the <b>Output path field</b> — it shows exactly where frames were saved<br>
-    <b>Step 7: Compile Frames into a Video with FFmpeg</b><br>
+    <br><b>Step 7: Compile Frames into a Video with FFmpeg</b><br>
     Once you have located your frames, open <b>Command Prompt</b> and run:<br>
   </p>
   <pre>ffmpeg -framerate 24 -i "C:/tmp/%04d.png" -c:v libx264 -pix_fmt yuv420p "C:/Users/Charlie/OneDrive/Desktop/solar_system.mp4"</pre>
