@@ -189,14 +189,14 @@
     cursor:pointer;
   }
 
-  .planet-video-box video{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+  .planet-video-box img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
 
   .planet-video-box iframe{
     position:absolute;
@@ -482,7 +482,7 @@
   const slidePlanets = [
     {
       name:"Sun", orbit:null,
-      video:"videos/sun.mp4",
+      video:"videos/sun.gif",
       desc:"The Sun is the star at the centre of our solar system. It is an almost perfect sphere of super-hot gases whose gravity holds the solar system together. The energy produced by the Sun is essential for life on Earth and is a driving force behind the Earth's weather.",
       specs:`<b>Age:</b> 4.6 Billion Years
   <b>Type:</b> Yellow Dwarf (G2V)
@@ -492,7 +492,7 @@
     },
     {
       name:"Mercury", orbit:0.24,
-      video:"videos/mercury.mp4",
+      video:"videos/mercury.gif",
       desc:"Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. For every two orbits of the Sun, Mercury completes three rotations about its axis.",
       specs:`<b>Diameter:</b> 4,879 km
   <b>Mass:</b> 3.29 × 10^23 kg (0.06 Earths)
@@ -502,7 +502,7 @@
     },
     {
       name:"Venus", orbit:0.62,
-      video:"videos/venus.mp4",
+      video:"videos/venus.gif",
       desc:"Venus is the second planet from the Sun and is sometimes referred to as the Earth's sister planet due to their similar size and mass. Venus is named after the Roman goddess of love and beauty.",
       specs:`<b>Diameter:</b> 12,104 km
   <b>Mass:</b> 4.87 × 10^24 kg (0.82 Earths)
@@ -512,7 +512,7 @@
     },
     {
       name:"Earth", orbit:1,
-      video:"videos/earth.mp4",
+      video:"videos/earth.gif",
       desc:"Earth is the third planet from the Sun and is the largest of the terrestrial planets. It is the only known planet to support life, formed approximately 4.54 billion years ago.",
       specs:`<b>Diameter:</b> 12,756 km
   <b>Mass:</b> 5.97 × 10^24 kg
@@ -522,7 +522,7 @@
     },
     {
       name:"Moon", orbit:0.0748,
-      video:"videos/moon.mp4",
+      video:"videos/moon.gif",
       desc:"The Moon is Earth's only natural satellite and the fifth largest moon in the solar system. It has a significant effect on Earth's tides and axial tilt.",
       specs:`<b>Diameter:</b> 3,475 km
   <b>Mass:</b> 7.35 × 10^22 kg
@@ -532,7 +532,7 @@
     },
     {
       name:"Mars", orbit:1.88,
-      video:"videos/mars.mp4",
+      video:"videos/mars.gif",
       desc:"Mars is the fourth planet from the Sun, often described as the Red Planet due to its reddish appearance. It is a terrestrial planet with a thin atmosphere composed primarily of carbon dioxide.",
       specs:`<b>Diameter:</b> 6,792 km
   <b>Mass:</b> 6.39 × 10^23 kg (0.11 Earths)
@@ -542,7 +542,7 @@
     },
     {
       name:"Jupiter", orbit:11.86,
-      video:"videos/jupiter.mp4",
+      video:"videos/jupiter.gif",
       desc:"Jupiter is the largest planet in the solar system, two and a half times more massive than all other planets combined. It is made primarily of gases and is therefore known as a gas giant.",
       specs:`<b>Diameter:</b> 142,984 km
   <b>Mass:</b> 1.90 × 10^27 kg (318 Earths)
@@ -552,7 +552,7 @@
     },
     {
       name:"Saturn", orbit:29.4,
-      video:"videos/saturn.mp4",
+      video:"videos/saturn.gif",
       desc:"Best known for its fabulous ring system, Saturn is the sixth planet from the Sun and the second largest in our solar system. Like Jupiter, it is a gas giant composed of hydrogen, helium and methane.",
       specs:`<b>Diameter:</b> 120,536 km
   <b>Mass:</b> 5.68 × 10^26 kg (95 Earths)
@@ -562,7 +562,7 @@
     },
     {
       name:"Uranus", orbit:84,
-      video:"videos/uranus.mp4",
+      video:"videos/uranus.gif",
       desc:"Uranus is the seventh planet from the Sun, tipped over on its side with an axial tilt of 98 degrees. It became the first planet discovered with the use of a telescope.",
       specs:`<b>Diameter:</b> 51,118 km
   <b>Mass:</b> 8.68 × 10^25 kg (15 Earths)
@@ -572,7 +572,7 @@
     },
     {
       name:"Neptune", orbit:165,
-      video:"videos/neptune.mp4",
+      video:"videos/neptune.gif",
       desc:"Neptune is the eighth and most distant planet in the solar system. This gas giant may have formed much closer to the Sun before migrating out to its current position.",
       specs:`<b>Diameter:</b> 49,528 km
   <b>Mass:</b> 1.02 × 10^26 kg (17 Earths)
@@ -582,7 +582,7 @@
     },
     {
       name:"Pluto", orbit:248,
-      video:"videos/pluto.mp4",
+      video:"videos/pluto.gif",
       desc:"Discovered in 1930, Pluto is the second closest dwarf planet to the Sun and was once classified as the ninth planet. It is the largest dwarf planet but only the second most massive.",
       specs:`<b>Diameter:</b> 2,372 km
   <b>Mass:</b> 1.31 × 10^22 kg
@@ -603,10 +603,7 @@
     const box = document.getElementById('planet-video-box');
 
     box.innerHTML = `
-      <video autoplay muted loop controls>
-        <source src="${p.video}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <img src="${p.video}" alt="${p.name}">
     `;
 
     document.getElementById('planet-name').textContent = p.name;
